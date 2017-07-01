@@ -50,7 +50,7 @@ body  {
   background-color: #001837;
 }
 button {
-  background-color: #fffaaa;
+  background-color: #ffffff;
 }
 
 
@@ -277,9 +277,9 @@ display: block;
 }
 
 /* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+ .modal-content {
+  background-color: #fefefe;
+    margin: 12% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #001837;
     width: 90%; /* Could be more or less, depending on screen size */
@@ -320,9 +320,27 @@ display: block;
     transform: rotate(1turn);
 }
 
-.view img{
-width: 100%;
+.modal-content .sidebarproject {
+  position:fixed;
+  width: 27%;
 }
+
+.modal-content .project {
+  width: 70%;
+  float:right;
+}
+
+.project img {
+  display: block;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.clear {
+  clear: both;
+}
+
 
 /*END OVERLAY*/
 
