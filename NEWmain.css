@@ -55,7 +55,7 @@ button {
 
 
 .hline {
-  max-width: 800px;
+  max-width: inherit;
   height: 1px;
   background: #000000;
   padding: 15px auto 15px auto;
@@ -148,6 +148,7 @@ h2 {
   font-weight:bold;
     color: #000000;
     text-align: left;
+    line-height: 1.3em;
     text-transform:uppercase;
     padding-bottom: 5px;
 }
@@ -191,7 +192,8 @@ font-family: 'Heebo', sans-serif;
 }
 
 .HP {
-max-width: 500px;
+max-width: 540px;
+font-size: 1em;
   width: auto;
 }
 
@@ -212,11 +214,6 @@ display: block;
   padding-right: 5%;
 }
 
-.sidebar p {
-  font-family: 'Heebo', sans-serif;
-    font-size: 1em;
-    font-weight:bold;
-}
 
 .Clients p {
   font-family: 'Heebo', sans-serif;
@@ -265,7 +262,7 @@ display: block;
   display: flex;
   font-family: 'Nixie One', cursive;
   font-size: 1.1rem;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
   font-weight: bold;
   cursor: default;
   text-decoration: none;
@@ -292,7 +289,7 @@ display: block;
 /*OVERLAY*/
 /* The Modal (background) */
 .modal {
-    display:hide; /* Hidden by default */
+    display:none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -366,6 +363,23 @@ display: block;
     transform: rotate(1turn);
 }
 
+/* The Close Button4*/
+.close4 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: transform 4s ease-out;
+}
+
+.close4:hover,
+.close4:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transform: rotate(1turn);
+}
+
 
 .modal-content .sidebarproject {
   position:fixed;
@@ -390,7 +404,14 @@ display: block;
 
 /*END OVERLAY*/
 
+#Read{
+       display:none; /* Hidden by default */
+}
 
+.readmore {
+  outline: none;
+  padding-top: 1.2em;
+}
 #toTop {
   transform: scale(0.6);
   position:relative;
