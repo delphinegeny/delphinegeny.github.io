@@ -116,7 +116,7 @@ svg  {
   height: 4.5%;
   width: 4.5%;
   transition: transform 4s ease-out;
-}
+} 
 
 .button:hover {
 transform: rotate(1turn);
