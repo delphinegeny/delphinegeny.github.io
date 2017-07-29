@@ -43,6 +43,7 @@ i {
 }
 
 
+
 /*SITE*/
 body  {
   display: block;
@@ -195,16 +196,13 @@ font-family: 'Heebo', sans-serif;
 /*PORTFOLIO*/
 
 #Mywork {
-  display: inline-block;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  height: 100%;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 .sidebar {
 display: block;
   float: left;
-  height: 100%;
   width: 28%;
   padding-right: 5%;
 }
@@ -217,30 +215,27 @@ display: block;
 }
 
 #portfolio {
-  display:block;
-  height: auto;
   -webkit-column-count: 4;
   -moz-column-count: 4;
   column-count: 4;
-  -webkit-column-gap: 0.7rem;
-  -moz-column-gap: 0.7rem;
-  column-gap: 0.7rem;
+  -webkit-column-gap: 0.6rem;
+  -moz-column-gap: 0.6rem;
+  column-gap: 0.6rem;
 }
 
 .tile {
   display: block;
-    overflow: hidden;
-  width: 100%;
+  overflow: hidden;
   height: auto;
- position: relative;
   border: none;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .tile img{
   width: 100%;
-  border: none;
--  background-color: #FFFFFF;
+  height: auto;
+    margin-bottom: -5px;
+background-color: #FFFFFF;
   -webkit-transition: all 0.6s linear;
   -moz-transition: all 0.6s linear;
           transition: all 0.6s linear;
@@ -251,9 +246,9 @@ display: block;
 
 .tile:hover img {
   cursor: pointer;
-  -webkit-transform:scale3d(1.5,1.5, 1);
-  -moz-transform:scale3d(1.5,1.5, 1);
-          transform:scale3d(1.5,1.5, 1);
+  -webkit-transform:scale3d(1.4,1.4, 1);
+  -moz-transform:scale3d(1.4,1.4, 1);
+          transform:scale3d(1.4,1.4, 1);
 }
 
 .btn {
@@ -420,17 +415,6 @@ display: block;
   color: #888888;
 }
 
-#toTop {
-  transform: scale(0.6);
-  position:relative;
-  left: 91%;
-  margin-bottom: 10%;
-  margin: 0;
-  padding: 0;
-  height: 15%;
-  width: 15%;
-  cursor: pointer;
-}
 
 section .HP {
   height: 100%;
@@ -438,9 +422,9 @@ section .HP {
 
 .text {
 display: block;
-font-size: 0.9em;
+font-size: 0.85em;
   margin-left: 19%;
-  max-width: 520px;
+  max-width: 530px;
   width:auto;
     border-left: 0.15rem dashed #000;
     padding-left: 2rem;
@@ -464,36 +448,78 @@ margin-top: 6em;
 
 .arrowright {
 display: block;
-width: 0.5em;
+width: 0.65em;
 height: 1em;
 position: relative;
-border: 1em solid black;
 margin-left: 19%;
 background-image: url(arrowright.svg);
 background-repeat: no-repeat;
 background-position: left;
-background-origin: border-box;
--ms-transform: scale(0.85);
- -webkit-transform: scale(0.85);
-  transform: scale(0.85);
+-ms-transform: scale(1);
+ -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .arrowleft {
 display: block;
 float: right;
-width: 0.5em;
+width: 0.65em;
 height: 1em;
 position: relative;
 margin-right: 81%;
-border: 1em solid black;
 background-image: url(arrowleft.svg);
 background-repeat: no-repeat;
 background-position: right;
-background-origin: border-box;
--ms-transform: scale(0.85);
- -webkit-transform: scale(0.85);
-  transform: scale(0.85);
+-ms-transform: scale(1);
+ -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.clear {
+  clear: both;
 }
 
 
+.line {
+  border-bottom: 0.15rem dashed #000;
+  margin-top: 0.45em;
+  top: 10px;
+  width: 30%;
+}
+
+.cont-right  {
+  padding-left: 5px;
+  width: 0.65em;
+  height: 1em;
+  position: relative;
+  background-image: url(arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  -ms-transform: scale(1);
+   -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.name {
+width: 30%;
+position: relative;
+padding-left: 0.8em;
+height: auto;
+padding-top: 0;
+background-color: #ddd;
+background-repeat: no-repeat;
+}
+
+.float {
+float:left;
+}
+
+#toTop {
+  -ms-transform: scale(0.6);
+   -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+  position:relative;
+ left: 87%;
+  cursor: pointer;
+}
 /*SITE*/
