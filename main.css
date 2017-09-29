@@ -47,7 +47,7 @@ i {
 /*SITE*/
 body  {
   display: block;
-  background: url("patern2.svg") fixed;
+  background: url("images_home/patern2.svg") fixed;
   background-color: #001837;
 }
 button {
@@ -116,7 +116,7 @@ svg  {
   height: 4.5%;
   width: 4.5%;
   transition: transform 4s ease-out;
-} 
+}
 
 .button:hover {
 transform: rotate(1turn);
@@ -452,7 +452,7 @@ width: 0.65em;
 height: 1em;
 position: relative;
 margin-left: 19%;
-background-image: url(arrowright.svg);
+background-image: url(images_home/arrowright.svg);
 background-repeat: no-repeat;
 background-position: left;
 -ms-transform: scale(1);
@@ -467,7 +467,7 @@ width: 0.65em;
 height: 1em;
 position: relative;
 margin-right: 81%;
-background-image: url(arrowleft.svg);
+background-image: url(images_home/arrowleft.svg);
 background-repeat: no-repeat;
 background-position: right;
 -ms-transform: scale(1);
@@ -492,7 +492,7 @@ background-position: right;
   width: 0.65em;
   height: 1em;
   position: relative;
-  background-image: url(arrow.svg);
+  background-image: url(images_home/arrow.svg);
   background-repeat: no-repeat;
   background-position: right;
   -ms-transform: scale(1);
