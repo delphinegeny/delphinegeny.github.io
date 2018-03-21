@@ -68,7 +68,7 @@ element.style {
    height: 2px;
    background: #000000;
    padding: 0px auto 15px auto;
-   margin: 0px auto 20px auto;
+   margin
  }
 
  .hline2 {
@@ -90,6 +90,14 @@ element.style {
    background: #000000;
    padding: 0px auto 0px auto;
    margin: 0px auto 0px auto;
+   width: 5%;
+ }
+
+ .hline5 {
+   height: 2px;
+   background: #000000;
+   padding: 0px auto 0px auto;
+   margin: -40px auto 20px auto;
    width: 5%;
  }
 
@@ -183,10 +191,25 @@ width: 100%;
    font-style: bold;
    color: #000;
    text-align: center;
-   line-height: 1.7em;
+   line-height: 1.8em;
    width: 80%;
    max-width: 700px;
    margin: auto;
+ }
+
+ @media all and (max-width: 900px) {
+   p {
+        font-size: 1em;
+     width: 96%;
+   }
+ }
+
+ @media all and (max-width: 700px) {
+   p {
+        font-size: 0.9em;
+           line-height: 1.6em;
+     width: 98%;
+   }
  }
 
 h1{
@@ -326,6 +349,7 @@ position: relative;
 
  .container3 h3 {
    text-align: right;
+   font-weight: 300;
 
 
  }
@@ -616,12 +640,13 @@ li .first {
  }
 
  .square {
-  width: 60%;
-  height: 100px;
+  width: 55%;
+  height: 200px;
   margin-right: 2.5%;
   margin-top: 20px;
   margin-bottom: 20px;
   background: #11EEDD;
+  z-index: -1
 }
 
  .about-first {
@@ -637,66 +662,33 @@ li .first {
  }
 
 .svgabout {
-  margin-left: 45%;
-  margin-top: 75px;
-  transform: scale(1.8);
+  margin: auto;
+  width: 150px;
+  padding-top: 50px;
+  padding-bottom: 45px;
+  transform: scale(2);
 }
 
- .bio-text {
-   float: none;
-   display: block;
-   font-size: 0.85em;
-   max-width: 750px;
-   width: auto;
-   padding-bottom: 4rem;
-   color: #fff;
- }
-
- .containerarrow {
-   clear: both;
+ .bio p {
+margin-top: 0px;
  }
 
  .clear {
    clear: both;
  }
 
- .line {
-   border-bottom: 0.15rem dashed #000;
-   margin-top: 0.45em;
-   top: 10px;
+ .wcidfy-first {
+   display: inline-flex;
+   width: 100%;
  }
 
- .down {
-   transform: rotate(45deg);
-   -webkit-transform: rotate(45deg);
+ .svgwcidfy {
+   margin-left: 15%;
+   margin-top: 140px;
+   transform: scale(1.5);
  }
 
- .cont-right {
-   padding-left: 5px;
-   width: 0.65em;
-   height: 1em;
-   position: relative;
-   background-image: url(images_home/arrow.svg);
-   background-repeat: no-repeat;
-   background-position: right;
-   -ms-transform: scale(1);
-   -webkit-transform: scale(1);
-   transform: scale(1);
- }
 
- .name {
-   width: 30%;
-   position: relative;
-   padding-left: 0.8em;
-   height: auto;
-   padding-top: 0;
-   background-color: #ddd;
-   background-repeat: no-repeat;
- }
-
- .float {
-   float: left;
- }
 
 #contact h1 {
   text-align: center;
