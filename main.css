@@ -60,13 +60,6 @@ element.style {
    margin-bottom: 0px;
  }
 
- body {
-   background: url("images_home/patern3.svg") fixed;
-   background-color: #001837;
-   margin-top: 0;
-   padding-top: 0;
- }
-
  .topbutton {
    background-color: #ffffff;
  }
@@ -92,10 +85,41 @@ element.style {
    margin: 5px auto 5px auto;
  }
 
+ .hline4 {
+   height: 2px;
+   background: #000000;
+   padding: 0px auto 0px auto;
+   margin: 0px auto 0px auto;
+   width: 5%;
+ }
+
  svg {
-   width: 100%;
+width: 100%;
    margin-top: 5em;
    padding-top: 0;
+   background-color: #fff;
+   z-index: 50;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  svg {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari */
+    transform: scale(1.2);
+    background-color: #fff;
+    z-index: 50;
+  }
+}
+
+ @media only screen and (max-width: 900px) {
+   svg {
+     -ms-transform: scale(1.4); /* IE 9 */
+     -webkit-transform: scale(1.4); /* Safari */
+     transform: scale(1.4);
+     background-color: #fff;
+     z-index: 50;
+   }
  }
 
  #myworkmenu {
@@ -144,18 +168,25 @@ element.style {
    padding: 5% 5% 0% 5%;
    margin: 2%;
    background-color: #FFF;
-   -webkit-box-shadow: 0 0 10px rgba(0, 110, 110, 7), inset 0 0 0.2px rgba(0, 0, 0, 0);
-   -moz-box-shadow: 0 0 10px rgba(0, 110, 110, 7), inset 0 0 0.2px rgba(0, 0, 0, 0);
-   box-shadow: 0 0 10px rgba(0, 110, 110, 7), inset 0 0 0.2px rgba(0, 0, 0, 0);
+ }
+
+ .site {
+   position: sticky;
+   margin: 0 2% 2% 2%;
+   padding: 0 5% 0% 5%;
+   background-color: #FFF;
  }
 
  p {
    font-family: 'Nixie One', cursive;
-   font-size: 1.2em;
+   font-size: 1.1em;
    font-style: bold;
    color: #000;
-   text-align: left;
-   line-height: 1.5em;
+   text-align: center;
+   line-height: 1.7em;
+   width: 80%;
+   max-width: 700px;
+   margin: auto;
  }
 
 h1{
@@ -182,11 +213,12 @@ h1{
 
  h3 {
    font-family: 'Work Sans', sans-serif;
-   font-size: 1em;
-   font-weight: 600;
-   color: #000000;
+   font-size: 0.7em;
+   font-weight: 300;
+    letter-spacing: 1.9px;
+   color: #11EEDD;
    text-align: left;
-   line-height: 1.5em;
+   line-height: 2em;
    text-transform: uppercase;
  }
 
@@ -195,9 +227,9 @@ h1{
    font-size: 0.9em;
    font-weight: 300;
    color: #000000;
-   text-align: left;
    line-height: 1.5em;
- }
+      text-align: left;
+  }
 
  h5 {
    font-family: 'Nixie One', cursive;
@@ -244,12 +276,13 @@ h1{
    top: 0px;
    bottom: 0px;
    left: 50%;
-   margin-left: -3px;
+   margin-left: -2px;
+   z-index: -1;
  }
  /* Container around content */
 
  .container {
-   padding: 0px 40px;
+   padding: 0px 20px;
    position: relative;
    background-color: inherit;
    width: 50%;
@@ -257,15 +290,19 @@ h1{
  /* Container around content */
 
  .container1 {
-   padding: 0px 30px;
+   padding: 0px 25px;
    position: relative;
    background-color: inherit;
    width: 50%;
  }
+
+ .container1 h4 {
+   text-align: left;
+ }
  /* Container around content */
 
  .container2 {
-   padding: 0px 0px;
+   padding: 0px 20px;
    position: relative;
    background-color: inherit;
    width: 50%;
@@ -273,21 +310,24 @@ h1{
  /* Container around content */
 
  .container3 {
-   padding: 0px 30px;
+   padding: 0px 20px;
    position: relative;
    background-color: inherit;
    width: 50%;
  }
- /* Container3 text content */
 
- .container3 h4 {
-   text-align: right;
+  .container3 h4 {
+text-align: right;
+position: relative;
+
  }
+
  /* Container3 text content */
 
- .container3 h2 {
+ .container3 h3 {
    text-align: right;
-   text-decoration: underline;
+
+
  }
  /* Container around content */
 
@@ -304,7 +344,7 @@ h1{
    position: absolute;
    width: 12px;
    height: 12px;
-   right: -5px;
+   right: -6px;
    border: solid #000000;
    border-width: 0 2px 2px 0;
    top: 23px;
@@ -319,9 +359,8 @@ h1{
    position: absolute;
    width: 17px;
    height: 17px;
-   left: -17px;
    background-color: white;
-   border: 2.5px solid #000000;
+   border: 2px solid #000000;
    top: 20px;
    border-radius: 50%;
    z-index: 1;
@@ -333,9 +372,9 @@ h1{
    position: absolute;
    width: 17px;
    height: 17px;
-   right: -8px;
+   right: -9px;
    background-color: white;
-   border: 2.5px solid #000000;
+   border: 2px solid #000000;
    top: 20px;
    border-radius: 50%;
    z-index: 1;
@@ -365,7 +404,7 @@ h1{
  /* Fix the circle for containers on the right side */
 
  .right::after {
-   left: -13px;
+   left: -12px;
  }
  /* The actual content */
 
@@ -373,8 +412,42 @@ h1{
    padding: 13px 20px 25px 10px;
    position: relative;
    border-radius: 6px;
+   text-align: right;
+ }
+
+
+@media only screen and (min-width: 1000px) {
+   .container1 {
+     padding: 0px 100px 0px 15px;
+   }
+   .container3 {
+     padding: 0px 15px 0px 100px;
+   }
+}
+
+   @media all and (max-width: 800px) {
+     .container1 {
+       padding: 0px 0px 0 15px;
+       position: relative;
+       background-color: inherit;
+       width: 50%;
+     }
+     .container3 {
+       padding: 0px 0px 0 10px;
+       position: relative;
+       background-color: inherit;
+       width: 50%;
+     }
+     .content h4 {
+       font-size: 0.7em;
+      }
+ }
+
+ .space {
+   padding-bottom: 20px;
  }
  /*END TIMELINE*/
+
  /*PORTFOLIO*/
 
  .categorie {
@@ -403,11 +476,35 @@ h1{
    cursor: default;
    text-decoration: none;
    -webkit-appearance: none;
+    padding-left: 12px;
    border: 0;
-   color: #000000;
-   padding-top: 1.5em;
+      color: #000000;
    padding-bottom: 1px;
    margin: 0;
+ }
+
+li .first {
+   padding-left: 0px;
+ }
+
+ @media all and (max-width: 850px) {
+.btn {
+   font-size: 0.9rem;
+     padding-left: 10px;
+   }
+
+   @media all and (max-width: 700px) {
+  .btn {
+     font-size: 0.9rem;
+       padding-left: 7px;
+     }
+
+
+   .btn .first {
+     padding-left: 0;
+   }
+ }
+
  }
 
  .btn:hover {
@@ -458,16 +555,16 @@ h1{
  }
 
  #mywork .wrapper {
-   width: 90%;
+   width: 95%;
    margin: 1.5em auto;
  }
 
  #portfolio {
-   margin: 1.5em 0;
+   margin:  0;
    padding: 0;
-   -moz-column-gap: 1.5em;
-   -webkit-column-gap: 1.5em;
-   column-gap: 1.5em;
+   -moz-column-gap: 0.9em;
+   -webkit-column-gap: 0.9em;
+   column-gap: 0.9em;
    font-size: .85em;
  }
 
@@ -475,7 +572,7 @@ h1{
    display: inline-block;
    background: #fff;
    padding: 0em;
-   margin: 0 0 1.5em;
+   margin: 0 0 0.9em;
    width: 100%;
    box-sizing: border-box;
    -moz-box-sizing: border-box;
@@ -509,7 +606,7 @@ h1{
 
  @media only screen and (min-width: 1280px) {
    .wrapper {
-     width: 1260px;
+     width: 100%;
    }
  }
  /*END PORTFOLIO*/
@@ -518,32 +615,39 @@ h1{
    background-color: #D6FCF5;
  }
 
- #about .bio {
+ .square {
+  width: 60%;
+  height: 100px;
+  margin-right: 2.5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #11EEDD;
+}
+
+ .about-first {
    display: inline-flex;
+   width: 100%;
  }
 
  .my-picture {
    display: block;
-   width: 100%;
-   padding-bottom: 20px;
-   float: right;
+   width: 95%;
+   padding-bottom: 0px;
+   margin: auto;
  }
 
- .svgabout {
-   -ms-transform: scale(1);
-   -webkit-transform: scale(1);
-   transform: scale(1);
-   display: block;
- }
+.svgabout {
+  margin-left: 45%;
+  margin-top: 75px;
+  transform: scale(1.8);
+}
 
  .bio-text {
+   float: none;
    display: block;
    font-size: 0.85em;
-   margin-left: 19%;
    max-width: 750px;
    width: auto;
-   border-left: 1px solid #dbd9d4;
-   padding-left: 2rem;
    padding-bottom: 4rem;
    color: #fff;
  }
@@ -636,60 +740,38 @@ h1{
  /*PageProjet*/
  /*header*/
 
- header.smaller {
-   height: 75px;
-   position: fixed;
-   top: -11px;
- }
-
- header.smaller svg {
-   width: 600px;
-   height: 75px;
- }
-
- header.smaller nav {
-   display: inline-block;
-   padding-top: 42px;
- }
-
- header.smaller nav a {
-   font-size: 1em;
- }
 
  header {
-   height: 10em;
-   overflow: hidden;
-   position: fixed;
-   top: 2%;
-   left: 2%;
-   right: 2%;
-   z-index: 999;
-   background-color: #fff;
- }
+width: 100%;
+height: 100px;
+background-color: #fff;
+position: sticky;
+position: -webkit-sticky;
+top: 0;
+overflow: hidden;
+z-index: 999;
+   border-bottom: 1px solid #dbd9d4;
+}
 
- header svg {
+ .logo {
    float: left;
-   position: absolute;
-   margin: 0 0 0 4%;
-   padding-left: 1%;
-   padding-top: 20px;
-   z-index: -1;
+      padding-top: 25px;
  }
 
  header nav {
-   display: inline-block;
-   float: right;
-   background-color: #fff;
-   padding: 90px 5.5% 20px 2%;
+   float:right;
+   text-align: center;
+   padding-top: 40px;
  }
 
  header nav a {
-   margin-left: 19px;
    color: #000;
    font-family: 'Nixie One', cursive;
    text-decoration: none;
    font-weight: bold;
    font-size: 1em;
+   text-align: center;
+   padding-left: 20px;
  }
 
  header nav a:hover {
@@ -697,45 +779,30 @@ h1{
  }
 
  @media all and (max-width: 600px) {
-   header svg {
+header {
+  height:160px;
+       float:none;
+}
+.logo {
      display: block;
-     float: none;
-     width: auto;
-     height: 50%;
-     margin-left: 40%;
-     margin-top: 2%;
-     padding: 0px auto 0px auto;
+       float:none;
+    text-align: center;
+     margin-left: 42%;
+     margin-right: 42%;
    }
-   header svg #trait {
-     display: none;
-   }
-   header nav {
+
+   header nav{
      display: block;
-     float: none;
-     background: none;
-     text-align: center;
-     margin: 0 auto;
-     padding-top: 100px;
-   }
-   header nav a {
-     font-size: 1.1em;
-   }
-   header.smaller {
-     height: 7em;
-   }
-   header.smaller svg {
-     margin-top: 0;
-   }
-   header.smaller nav {
-     display: block;
-     float: none;
-     padding-top: 70px;
+     float:none;
+     align-items: center;
+     padding-top: 20px;
    }
  }
+
  /*header end*/
 
  .project-content {
-   padding-top: 9em;
+   padding-top: 6em;
    padding-bottom: 7em;
  }
 
@@ -759,6 +826,7 @@ h1{
    width: 30%;
    float: left;
    position: sticky;
+   position: -webkit-sticky;
    top: 18%;
    padding-right: 30px;
  }
@@ -766,7 +834,6 @@ h1{
  .description-projet-details {
    border-top: 1px solid #dbd9d4;
    padding-top: 1em;
-   margin-top: 1.5em;
    border-bottom: 1px solid #dbd9d4;
    padding-bottom: 1em;
    margin-bottom: 1.5em;
@@ -800,14 +867,16 @@ h1{
 }
 
  @media only screen and (max-width: 600px) {
+   .project-content {
+     padding-top: 3em;
+     padding-bottom: 7em;
+   }
+
    .project-description-title-mobile {
      display: block;
-     border-top: 1px solid #dbd9d4;
-     padding-top: 1em;
-     margin-top: 1.5em;
-     padding-bottom: 1em;
+     padding-bottom: 3em;
    }
-   .project-description-title-mobile p {
+   .project-description-title-mobile h1 {
      text-align: center;
    }
    .project-visuals {
@@ -825,3 +894,47 @@ h1{
      position: relative;
    }
  }
+
+ /*OVERLAY*/
+ /* The Modal (background) */
+ .modal {
+     visibility: hidden;
+     opacity: 0; /* Hidden by default */
+     transition: opacity .5s, visibility .5s;
+     position: fixed; /* Stay in place */
+     z-index: 1100; /* Sit on top */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgba(00,18,37,1); /* Black w/ opacity */
+     background: url("images_home/background-cutting-mat-horizontal.jpg") fixed;
+     background-size: cover;
+background-color: #005657;
+background-position: center;
+ }
+
+
+ /* The Close Button */
+ .close {
+   position: fixed;
+   top:20px;
+   right: 20px;
+     color: #aaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+     transition: transform 4s ease-out;
+ }
+
+ .close:hover,
+ .close:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+     transform: rotate(1turn);
+        color: #00EEDD;
+ }
+
+/*END OVERLAY*/
