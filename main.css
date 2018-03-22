@@ -46,13 +46,13 @@
  /*SITE*/
 
  @font-face {
-    font-family: 'Nixie One';
-    src: url(font/NixieOne-Regular.ttf);
-}
+   font-family: 'Nixie One';
+   src: url(font/NixieOne-Regular.ttf);
+ }
 
-element.style {
-  clear: both;
-}
+ element.style {
+   clear: both;
+ }
 
  .top {
    height: auto;
@@ -67,8 +67,9 @@ element.style {
  .hline {
    height: 2px;
    background: #000000;
-   padding: 0px auto 15px auto;
-   margin
+   padding: 20px auto 15px auto;
+   margin-top: 55px;
+   margin-bottom: 35px;
  }
 
  .hline2 {
@@ -101,32 +102,33 @@ element.style {
    width: 5%;
  }
 
- svg {
-width: 100%;
+ .svg-header svg {
+   width: 100%;
+   position: relative;
    margin-top: 5em;
    padding-top: 0;
    background-color: #fff;
-   z-index: 50;
-}
+   -webkit-transform: translate3d(0,0,0);
+         z-index: 2;
+ }
 
-
-@media only screen and (max-width: 1200px) {
-  svg {
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari */
-    transform: scale(1.2);
-    background-color: #fff;
-    z-index: 50;
-  }
-}
+ @media only screen and (max-width: 1200px) {
+   .svg-header svg {
+     -ms-transform: scale(1.2);
+     /* IE 9 */
+     -webkit-transform: scale(1.2);
+     /* Safari */
+     transform: scale(1.2);
+   }
+ }
 
  @media only screen and (max-width: 900px) {
-   svg {
-     -ms-transform: scale(1.4); /* IE 9 */
-     -webkit-transform: scale(1.4); /* Safari */
+   .svg-header svg {
+     -ms-transform: scale(1.4);
+     /* IE 9 */
+     -webkit-transform: scale(1.4);
+     /* Safari */
      transform: scale(1.4);
-     background-color: #fff;
-     z-index: 50;
    }
  }
 
@@ -165,8 +167,13 @@ width: 100%;
    transition: transform 4s ease-out;
  }
 
- .topbutton:hover {
+ .topbutton:hover, .topbutton:focus {
+   -ms-transform: rotate(1turn);
+   -webkit-transform: rotate(1turn);
    transform: rotate(1turn);
+   text-decoration: none;
+   cursor: pointer;
+   color: #00EEDD;
  }
 
  .maincontent {
@@ -199,20 +206,20 @@ width: 100%;
 
  @media all and (max-width: 900px) {
    p {
-        font-size: 1em;
+     font-size: 1em;
      width: 96%;
    }
  }
 
  @media all and (max-width: 700px) {
    p {
-        font-size: 0.9em;
-           line-height: 1.6em;
+     font-size: 0.9em;
+     line-height: 1.6em;
      width: 98%;
    }
  }
 
-h1{
+ h1 {
    font-family: 'Nixie One', cursive;
    font-size: 1.4em;
    font-style: normal;
@@ -238,7 +245,7 @@ h1{
    font-family: 'Work Sans', sans-serif;
    font-size: 0.7em;
    font-weight: 300;
-    letter-spacing: 1.9px;
+   letter-spacing: 1.9px;
    color: #11EEDD;
    text-align: left;
    line-height: 2em;
@@ -251,8 +258,8 @@ h1{
    font-weight: 300;
    color: #000000;
    line-height: 1.5em;
-      text-align: left;
-  }
+   text-align: left;
+ }
 
  h5 {
    font-family: 'Nixie One', cursive;
@@ -288,6 +295,7 @@ h1{
    position: relative;
    max-width: 1200px;
    margin: 0 auto;
+
  }
  /* The actual timeline (the vertical ruler) */
 
@@ -300,7 +308,7 @@ h1{
    bottom: 0px;
    left: 50%;
    margin-left: -2px;
-   z-index: -1;
+      z-index: 1;
  }
  /* Container around content */
 
@@ -309,6 +317,7 @@ h1{
    position: relative;
    background-color: inherit;
    width: 50%;
+
  }
  /* Container around content */
 
@@ -339,19 +348,15 @@ h1{
    width: 50%;
  }
 
-  .container3 h4 {
-text-align: right;
-position: relative;
-
+ .container3 h4 {
+   text-align: right;
+   position: relative;
  }
-
  /* Container3 text content */
 
  .container3 h3 {
    text-align: right;
    font-weight: 300;
-
-
  }
  /* Container around content */
 
@@ -374,7 +379,7 @@ position: relative;
    top: 23px;
    transform: rotate(45deg);
    -webkit-transform: rotate(45deg);
-   z-index: 1;
+   z-index: 3;
  }
  /* The circles left on the timeline */
 
@@ -387,7 +392,8 @@ position: relative;
    border: 2px solid #000000;
    top: 20px;
    border-radius: 50%;
-   z-index: 1;
+    z-index: 3;
+     -webkit-transform: translateZ(2);
  }
  /* The circles right on the timeline */
 
@@ -401,7 +407,7 @@ position: relative;
    border: 2px solid #000000;
    top: 20px;
    border-radius: 50%;
-   z-index: 1;
+     z-index: 3;
  }
  /* The line on the timeline */
 
@@ -413,7 +419,6 @@ position: relative;
    border: solid #000000;
    border-width: 0 0 2px 0;
    bottom: 5px;
-   z-index: 1;
  }
  /* Place the container to the left */
 
@@ -439,39 +444,37 @@ position: relative;
    text-align: right;
  }
 
-
-@media only screen and (min-width: 1000px) {
+ @media only screen and (min-width: 1000px) {
    .container1 {
-     padding: 0px 100px 0px 15px;
+     padding: 0px 90px 0px 15px;
    }
    .container3 {
-     padding: 0px 15px 0px 100px;
+     padding: 0px 15px 0px 90px;
    }
-}
+ }
 
-   @media all and (max-width: 800px) {
-     .container1 {
-       padding: 0px 0px 0 15px;
-       position: relative;
-       background-color: inherit;
-       width: 50%;
-     }
-     .container3 {
-       padding: 0px 0px 0 10px;
-       position: relative;
-       background-color: inherit;
-       width: 50%;
-     }
-     .content h4 {
-       font-size: 0.7em;
-      }
+ @media all and (max-width: 800px) {
+   .container1 {
+     padding: 0px 0px 0 15px;
+     position: relative;
+     background-color: inherit;
+     width: 50%;
+   }
+   .container3 {
+     padding: 0px 0px 0 10px;
+     position: relative;
+     background-color: inherit;
+     width: 50%;
+   }
+   .content h4 {
+     font-size: 0.7em;
+   }
  }
 
  .space {
    padding-bottom: 20px;
  }
  /*END TIMELINE*/
-
  /*PORTFOLIO*/
 
  .categorie {
@@ -500,35 +503,31 @@ position: relative;
    cursor: default;
    text-decoration: none;
    -webkit-appearance: none;
-    padding-left: 12px;
+   padding-left: 12px;
    border: 0;
-      color: #000000;
+   color: #000000;
    padding-bottom: 1px;
    margin: 0;
  }
 
-li .first {
+ li .first {
    padding-left: 0px;
  }
 
  @media all and (max-width: 850px) {
-.btn {
-   font-size: 0.9rem;
+   .btn {
+     font-size: 0.9rem;
      padding-left: 10px;
    }
-
    @media all and (max-width: 700px) {
-  .btn {
-     font-size: 0.9rem;
+     .btn {
+       font-size: 0.9rem;
        padding-left: 7px;
      }
-
-
-   .btn .first {
-     padding-left: 0;
+     .btn .first {
+       padding-left: 0;
+     }
    }
- }
-
  }
 
  .btn:hover {
@@ -584,7 +583,7 @@ li .first {
  }
 
  #portfolio {
-   margin:  0;
+   margin: 0;
    padding: 0;
    -moz-column-gap: 0.9em;
    -webkit-column-gap: 0.9em;
@@ -640,14 +639,13 @@ li .first {
  }
 
  .square {
-  width: 55%;
-  height: 200px;
-  margin-right: 2.5%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background: #11EEDD;
-  z-index: -1
-}
+   width: 55%;
+   height: 200px;
+   margin-right: 2.5%;
+   margin-top: 20px;
+   background: #11EEDD;
+   z-index: -1
+ }
 
  .about-first {
    display: inline-flex;
@@ -661,16 +659,17 @@ li .first {
    margin: auto;
  }
 
-.svgabout {
-  margin: auto;
-  width: 150px;
-  padding-top: 50px;
-  padding-bottom: 45px;
-  transform: scale(2);
-}
+ .svgabout {
+   margin: auto;
+   width: 150px;
+   padding-top: 50px;
+   padding-bottom: 45px;
+   transform: scale(2);
+   -webkit-transform: translate3d(0,0,0);
+ }
 
  .bio p {
-margin-top: 0px;
+   margin-top: 0px;
  }
 
  .clear {
@@ -688,18 +687,16 @@ margin-top: 0px;
    transform: scale(1.5);
  }
 
+ #contact h1 {
+   text-align: center;
+   font-size: 1.2em;
+   padding-top: 20px;
+ }
 
-
-#contact h1 {
-  text-align: center;
-  font-size: 1.2em;
-  padding-top: 20px;
-}
-
-#contact a  {
-  text-decoration: none;
-  color: #00EEDD;
-}
+ #contact a {
+   text-decoration: none;
+   color: #00EEDD;
+ }
 
  #toTop {
    -ms-transform: scale(0.6);
@@ -732,26 +729,25 @@ margin-top: 0px;
  /*PageProjet*/
  /*header*/
 
-
  header {
-width: 100%;
-height: 100px;
-background-color: #fff;
-position: sticky;
-position: -webkit-sticky;
-top: 0;
-overflow: hidden;
-z-index: 999;
+   width: 100%;
+   height: 100px;
+   background-color: #fff;
+   position: sticky;
+   position: -webkit-sticky;
+   top: 0;
+   overflow: hidden;
+   z-index: 999;
    border-bottom: 1px solid #dbd9d4;
-}
+ }
 
  .logo {
    float: left;
-      padding-top: 25px;
+   padding-top: 25px;
  }
 
  header nav {
-   float:right;
+   float: right;
    text-align: center;
    padding-top: 40px;
  }
@@ -771,26 +767,24 @@ z-index: 999;
  }
 
  @media all and (max-width: 600px) {
-header {
-  height:160px;
-       float:none;
-}
-.logo {
+   header {
+     height: 160px;
+     float: none;
+   }
+   .logo {
      display: block;
-       float:none;
-    text-align: center;
+     float: none;
+     text-align: center;
      margin-left: 42%;
      margin-right: 42%;
    }
-
-   header nav{
+   header nav {
      display: block;
-     float:none;
+     float: none;
      align-items: center;
      padding-top: 20px;
    }
  }
-
  /*header end*/
 
  .project-content {
@@ -805,12 +799,11 @@ header {
  .project-visuals {
    display: inline-block;
    width: 70%;
-
  }
 
  .portfolio-image {
-     max-width: 100%;
-     padding-bottom: 15px;
+   max-width: 100%;
+   padding-bottom: 15px;
  }
 
  .sidebar {
@@ -831,39 +824,38 @@ header {
    margin-bottom: 1.5em;
  }
 
-.meta-title {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  text-transform: uppercase;
-  text-decoration: underline;
-  text-align: left;
-}
+ .meta-title {
+   font-family: 'Work Sans', sans-serif;
+   font-size: 10px;
+   font-weight: 400;
+   line-height: 14px;
+   text-transform: uppercase;
+   text-decoration: underline;
+   text-align: left;
+ }
 
-.meta {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 14px;
-  text-align: left;
-}
+ .meta {
+   font-family: 'Work Sans', sans-serif;
+   font-size: 11px;
+   font-weight: 400;
+   line-height: 14px;
+   text-align: left;
+ }
 
-.caption {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 9px;
-  font-weight: 300;
-  line-height: 14px;
-  color: #000;
-  text-decoration: none;
-}
+ .caption {
+   font-family: 'Work Sans', sans-serif;
+   font-size: 9px;
+   font-weight: 300;
+   line-height: 14px;
+   color: #000;
+   text-decoration: none;
+ }
 
  @media only screen and (max-width: 600px) {
    .project-content {
      padding-top: 3em;
      padding-bottom: 7em;
    }
-
    .project-description-title-mobile {
      display: block;
      padding-bottom: 3em;
@@ -878,7 +870,7 @@ header {
    .project-description-title {
      display: none;
    }
-   .sidebar{
+   .sidebar {
      display: block;
      width: 100%;
      padding-right: 0;
@@ -886,47 +878,50 @@ header {
      position: relative;
    }
  }
-
  /*OVERLAY*/
  /* The Modal (background) */
+
  .modal {
-     visibility: hidden;
-     opacity: 0; /* Hidden by default */
-     transition: opacity .5s, visibility .5s;
-     position: fixed; /* Stay in place */
-     z-index: 1100; /* Sit on top */
-     left: 0;
-     top: 0;
-     width: 100%; /* Full width */
-     height: 100%; /* Full height */
-     overflow: auto; /* Enable scroll if needed */
-     background-color: rgba(00,18,37,1); /* Black w/ opacity */
-     background: url("images_home/background-cutting-mat-horizontal.jpg") fixed;
-     background-size: cover;
-background-color: #005657;
-background-position: center;
+   visibility: hidden;
+   opacity: 0;
+   /* Hidden by default */
+   transition: opacity .5s, visibility .5s;
+   position: fixed;
+   /* Stay in place */
+   z-index: 1100;
+   /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%;
+   /* Full width */
+   height: 100%;
+   /* Full height */
+   overflow: auto;
+   /* Enable scroll if needed */
+   background-color: rgba(00, 18, 37, 1);
+   /* Black w/ opacity */
+   background: url("images_home/background-cutting-mat-horizontal.jpg") fixed;
+   background-size: cover;
+   background-color: #005657;
+   background-position: center;
  }
-
-
  /* The Close Button */
+
  .close {
    position: fixed;
-   top:20px;
+   top: 20px;
    right: 20px;
-     color: #aaa;
-     float: right;
-     font-size: 28px;
-     font-weight: bold;
-     transition: transform 4s ease-out;
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+   transition: transform 4s ease-out;
  }
 
- .close:hover,
- .close:focus {
-     color: black;
-     text-decoration: none;
-     cursor: pointer;
-     transform: rotate(1turn);
-        color: #00EEDD;
+ .close:hover, .close:focus {
+   text-decoration: none;
+   cursor: pointer;
+   transform: rotate(1turn);
+   color: #00EEDD;
  }
-
-/*END OVERLAY*/
+ /*END OVERLAY*/
