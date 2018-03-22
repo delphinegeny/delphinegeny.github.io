@@ -68,8 +68,6 @@
    height: 2px;
    background: #000000;
    padding: 20px auto 15px auto;
-   margin-top: 55px;
-   margin-bottom: 35px;
  }
 
  .hline2 {
@@ -94,14 +92,6 @@
    width: 5%;
  }
 
- .hline5 {
-   height: 2px;
-   background: #000000;
-   padding: 0px auto 0px auto;
-   margin: -40px auto 20px auto;
-   width: 5%;
- }
-
  .svg-header svg {
    width: 100%;
    position: relative;
@@ -109,7 +99,7 @@
    padding-top: 0;
    background-color: #fff;
    -webkit-transform: translate3d(0,0,0);
-         z-index: 2;
+         z-index: 5;
  }
 
  @media only screen and (max-width: 1200px) {
@@ -222,11 +212,11 @@
  h1 {
    font-family: 'Nixie One', cursive;
    font-size: 1.4em;
-   font-style: normal;
-   color: #000000;
-   font-weight: bold;
+   font-weight: 800;
+   color: #000;
    text-align: left;
-   line-height: 1.5em;
+   line-height: 1.8em;
+   margin: auto;
  }
 
  h2 {
@@ -264,7 +254,7 @@
  h5 {
    font-family: 'Nixie One', cursive;
    font-size: 12px;
-   font-weight: 700;
+   font-weight: 800;
    color: #000000;
    text-align: left;
    line-height: 1.5em;
@@ -308,7 +298,7 @@
    bottom: 0px;
    left: 50%;
    margin-left: -2px;
-      z-index: 1;
+      z-index: 4;
  }
  /* Container around content */
 
@@ -379,7 +369,7 @@
    top: 23px;
    transform: rotate(45deg);
    -webkit-transform: rotate(45deg);
-   z-index: 3;
+   z-index: 6;
  }
  /* The circles left on the timeline */
 
@@ -392,7 +382,7 @@
    border: 2px solid #000000;
    top: 20px;
    border-radius: 50%;
-    z-index: 3;
+    z-index: 6;
      -webkit-transform: translateZ(2);
  }
  /* The circles right on the timeline */
@@ -407,7 +397,7 @@
    border: 2px solid #000000;
    top: 20px;
    border-radius: 50%;
-     z-index: 3;
+     z-index: 6;
  }
  /* The line on the timeline */
 
@@ -638,15 +628,6 @@
    background-color: #D6FCF5;
  }
 
- .square {
-   width: 55%;
-   height: 200px;
-   margin-right: 2.5%;
-   margin-top: 20px;
-   background: #11EEDD;
-   z-index: -1
- }
-
  .about-first {
    display: inline-flex;
    width: 100%;
@@ -665,11 +646,6 @@
    padding-top: 50px;
    padding-bottom: 45px;
    transform: scale(2);
-   -webkit-transform: translate3d(0,0,0);
- }
-
- .bio p {
-   margin-top: 0px;
  }
 
  .clear {
@@ -685,6 +661,21 @@
    margin-left: 15%;
    margin-top: 140px;
    transform: scale(1.5);
+ }
+
+ .square {
+   width: 55%;
+   height: 200px;
+   margin-right: 2.5%;
+   margin-top: 20px;
+   background: #11EEDD;
+ }
+
+ .hline5 {
+   height: 2px;
+   background: #000000;
+   width: 5%;
+   margin: -20px auto 20px auto;
  }
 
  #contact h1 {
@@ -756,7 +747,7 @@
    color: #000;
    font-family: 'Nixie One', cursive;
    text-decoration: none;
-   font-weight: bold;
+   font-weight: 800;
    font-size: 1em;
    text-align: center;
    padding-left: 20px;
