@@ -67,7 +67,10 @@
  .hline {
    height: 2px;
    background: #000000;
-   padding: 20px auto 15px auto;
+   padding: 40px auto 15px auto;
+   margin-bottom: 30px;
+   margin-left: 0.9em;
+   margin-right: 0.9em;
  }
 
  .hline2 {
@@ -98,8 +101,8 @@
    margin-top: 5em;
    padding-top: 0;
    background-color: #fff;
-   -webkit-transform: translate3d(0,0,0);
-         z-index: 5;
+   -webkit-transform: translate3d(0, 0, 0);
+   z-index: 5;
  }
 
  @media only screen and (max-width: 1200px) {
@@ -285,7 +288,6 @@
    position: relative;
    max-width: 1200px;
    margin: 0 auto;
-
  }
  /* The actual timeline (the vertical ruler) */
 
@@ -298,7 +300,7 @@
    bottom: 0px;
    left: 50%;
    margin-left: -2px;
-      z-index: 4;
+   z-index: 4;
  }
  /* Container around content */
 
@@ -307,7 +309,6 @@
    position: relative;
    background-color: inherit;
    width: 50%;
-
  }
  /* Container around content */
 
@@ -382,8 +383,8 @@
    border: 2px solid #000000;
    top: 20px;
    border-radius: 50%;
-    z-index: 6;
-     -webkit-transform: translateZ(2);
+   z-index: 6;
+   -webkit-transform: translateZ(2);
  }
  /* The circles right on the timeline */
 
@@ -397,7 +398,7 @@
    border: 2px solid #000000;
    top: 20px;
    border-radius: 50%;
-     z-index: 6;
+   z-index: 6;
  }
  /* The line on the timeline */
 
@@ -451,7 +452,7 @@
      width: 50%;
    }
    .container3 {
-     padding: 0px 0px 0 10px;
+     padding: 0px 5px 0 15px;
      position: relative;
      background-color: inherit;
      width: 50%;
@@ -652,36 +653,68 @@
    clear: both;
  }
 
- .wcidfy-first {
-   display: inline-flex;
-   width: 100%;
- }
-
  .svgwcidfy {
-   margin-left: 15%;
-   margin-top: 140px;
    transform: scale(1.5);
+   margin-right: -57%;
+   padding: 20px 10px 0 10px;
  }
 
  .square {
-   width: 55%;
-   height: 200px;
-   margin-right: 2.5%;
-   margin-top: 20px;
+   width: 60%;
+   height: 25%;
+   margin-top: 2%;
+  margin-bottom: 7%;
+  margin-left: 40%;
+   margin-right: 2%;
    background: #11EEDD;
+ }
+
+ .wcidfy-text {
+     margin-left: 12.5%;
+          margin-right: 12.5%;
+          padding-top: 30px;
  }
 
  .hline5 {
    height: 2px;
    background: #000000;
-   width: 5%;
-   margin: -20px auto 20px auto;
+   width: 8.5%;
+   margin-top: 15px;
+   margin-bottom: 30px;
+   margin-left: 12.5%;
  }
+
+ @media all and (max-width: 900px) {
+   .svgwcidfy {
+     margin-right: -107%;
+   }
+ }
+   @media all and (max-width: 600px) {
+    .svgwcidfy {
+      margin-right: -27%;
+    }
+    .square {
+      width: 80%;
+      height: 25%;
+      margin-top: 2%;
+     margin-bottom: 7%;
+     margin-left: 20%;
+      margin-right: 2%;
+      background: #11EEDD;
+    }
+    .hline5 {
+      height: 2px;
+      background: #000000;
+      width: 6.5%;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      margin-left: 34%;
+    }
+  }
 
  #contact h1 {
    text-align: center;
    font-size: 1.2em;
-   padding-top: 20px;
  }
 
  #contact a {
