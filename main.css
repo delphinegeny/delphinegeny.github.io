@@ -655,7 +655,6 @@
 
  .svgwcidfy {
    transform: scale(1.5);
-   margin-right: -57%;
    padding: 20px 10px 0 10px;
  }
 
@@ -686,12 +685,10 @@
 
  @media all and (max-width: 900px) {
    .svgwcidfy {
-     margin-right: -107%;
    }
  }
    @media all and (max-width: 600px) {
     .svgwcidfy {
-      margin-right: -27%;
     }
     .square {
       width: 80%;
